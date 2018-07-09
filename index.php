@@ -19,24 +19,11 @@ if (isset($_GET['id']) AND $_GET['id'] > 0)
 
 
   
-  $new = $db->prepare("SELECT * FROM produits ORDER BY id DESC LIMIT 0,1");
+  $new = $db->prepare("SELECT * FROM produits ORDER BY id DESC LIMIT 0,4");
   $new->execute();
-
-  $newu = $db->prepare("SELECT * FROM produits ORDER BY id DESC LIMIT 1,1");
-  $newu->execute();
-
-  $newi = $db->prepare("SELECT * FROM produits ORDER BY id DESC LIMIT 2,1");
-  $newi->execute();
-
-  $newo = $db->prepare("SELECT * FROM produits ORDER BY id DESC LIMIT 3,1");
-  $newo->execute();
-
-  while ($n=$new->fetch(PDO::FETCH_OBJ)){ 
-  while ($u=$newu->fetch(PDO::FETCH_OBJ)){
-  while ($i=$newi->fetch(PDO::FETCH_OBJ)){
-  while ($o=$newo->fetch(PDO::FETCH_OBJ)){  
-
-
+  $prod = $new->fetchAll();
+  echo $prod;
+ 
 
 ?>
 
@@ -120,38 +107,28 @@ if (isset($_GET['id']) AND $_GET['id'] > 0)
           <div class="row index-produit">
             <h1 id="produit">Products</h1>
           <div class="card-group">
-                      <div class="card">
-                        <img class="card-img-top" src="admin/imgs/<?php echo $n->img; ?>" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"><?php echo $n->name; ?></h5>
-                          <p class="card-text"><?php echo $n->prix; ?> €</p>
-                          <div class="detailprod"><a href="produc.php?produc=<?php echo $n->name; ?>"><button type="button" class="btn">Voir détail</button></a></div>
-                        </div>
-                      </div>
-                       <div class="card">
-                        <img class="card-img-top" src="img/produit1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"><?php echo $u->name; ?></h5>
-                          <p class="card-text"><?php echo $u->prix; ?> €</p>
-                          <div class="detailprod"><button type="button" class="btn">Voir détail</button></div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <img class="card-img-top" src="img/produit1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"><?php echo $i->name; ?></h5>
-                          <p class="card-text"><?php echo $i->prix; ?> €</p>
-                          <div class="detailprod"><button type="button" class="btn">Voir détail</button></div>
-                        </div>
-                      </div>
-                       <div class="card">
-                        <img class="card-img-top" src="img/produit1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"><?php echo $o->name; ?></h5>
-                          <p class="card-text"><?php echo $o->prix; ?> €</p>
-                          <div class="detailprod"><button type="button" class="btn">Voir détail</button></div>
-                        </div>
-                      </div>
+
+
+
+          <?php
+            foreach ($prod as $p )  {
+          ?>
+              <div class="card">
+                <img class="card-img-top" src="admin/imgs/<?php echo str_replace("ECO/ECO/admin/imgs", "", $p[img]); ?>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $p["name"]; ?></h5>
+                  <p class="card-text"><?php echo $p["prix"]; ?> €</p>
+                  <div class="detailprod"><a href="produc.php?produc=<?php echo $p->name; ?>"><button type="button" class="btn">Voir détail</button></a></div>
+                </div>
+              </div>
+
+          <?php
+            }
+          ?>
+
+
+
+
          </div>
           </div>
       
@@ -220,11 +197,6 @@ if (isset($_GET['id']) AND $_GET['id'] > 0)
 
 
 <?php
-
-}
-}
-}
-}
 
 
 

@@ -16,7 +16,7 @@ if(isset($_SESSION['username']))
 
 				$db = new PDO('mysql:host=localhost;dbname=e-commerce', 'root','root');
 				
-				$img="ECO/ECO/admin/imgs".$_FILES['img']['name'];
+				$img=$_FILES['img']['name'];
 
 				$img_tmp=$_FILES['img']['tmp_name'];
 

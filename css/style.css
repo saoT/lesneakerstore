@@ -1,0 +1,280 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    height:100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400i|Quicksand');
+
+
+header {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+#general {
+    margin: 0;
+}
+#logo {
+    width: 100px;
+    height: 100px;
+}
+.nav-link {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.5em;
+}
+#card {
+    width: 40px;
+    height: 40px;
+}
+.form-control{
+    border-radius: 0;
+    border-color: black;
+}
+
+#navbarSupportedContent {
+    padding-right: 50px;
+}
+
+.navbar-brand {
+    margin-right:100px;
+}
+.contenu, .index-produit {
+    width: 100%;
+    margin: 0;
+}
+.contenu{
+    min-height: 100%;
+    margin-top: 50px;
+}
+.carousel{
+    margin : 0 auto;
+    width: 750px;
+}
+.index-produit{
+    margin-top: 50px;
+}
+.card {
+    border-color: black;
+    border-radius: 0;
+}
+.card-img-top {
+    padding: 10px;
+} 
+#produit {
+    width: 100%;
+    margin-left: 70px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 3em
+}
+
+.card-group {
+    margin:0 auto;
+    margin-top:40px; 
+}
+
+.detailprod 
+{
+      text-align: center;
+      bottom: 0%;
+      margin-top: 7.2%;
+      
+}
+.detailprod .btn
+{
+      background-color: #FE0000;
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bold;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      padding-right: 15%;
+      padding-left: 15%;
+}
+
+#icons li 
+{ 
+      display: inline; 
+}
+.icon
+{
+      margin: 1%;
+}
+.faq
+{
+      text-align: right;
+      color: white;
+      padding-left: 1%;
+      margin-right: 20px;
+}
+
+.faq a {
+    margin: 5px;
+}
+.social, .faq{  
+      flex: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.social p{
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.social {
+    margin-top: 20px;
+}
+footer a 
+{
+      text-decoration: none;
+      color: white;
+}
+footer
+{
+      background-color: #000000;
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bold;
+      width: 100%;
+}
+footer.row {
+    margin: 0px;
+    margin-top: 70px;
+    bottom: 0px;
+}
+.info-perso {
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+}
+.info-perso img {
+    width: 150px;
+    height: 150px;
+    margin:10px;
+}
+.profil{
+    display: flex;
+}
+.logout p {
+    text-align: center;
+}
+.panier {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 50px;
+}
+.total-produit {
+    text-align: center;
+}
+
+.log
+{
+	border: 1px solid black;
+	margin-right: 30%;
+	margin-left: 30%;
+	padding-top: 4.5%;
+	padding-bottom: 4.5%;
+}
+input 
+{
+	margin: 1%;
+}
+
+.newuser 
+{
+	border: 1px solid black;
+	margin-right: 30%;
+	margin-left: 30%;
+	padding: 1%;
+}
+.blog
+{
+	color: white;
+	background-color: red;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 215%;
+	font-weight: bold;
+	padding-left: 12%;
+	padding-right: 12%;
+
+
+}
+.new
+{
+	color: white;
+	background-color: #00FF01;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 180%;
+	font-weight: bold;
+	padding-left: 6%;
+	padding-right: 6%;
+}
+h2
+{
+	font-family: 'PT Sans', sans-serif;
+	font-weight: bold;
+	font-size:4em;
+}
+.contenu div {
+    text-align: center;
+}
+table
+{
+    border-collapse: collapse;
+}
+td, th 
+{
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 2em;
+}
